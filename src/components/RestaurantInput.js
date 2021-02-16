@@ -49,17 +49,21 @@ export class RestaurantInput extends Component {
   }
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addRestaurant: (restaurant) => {
-      dispatch(addRestaurant(restaurant))
-    }
-  }
-}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addRestaurant: (restaurant) => {
+//       dispatch(addRestaurant(restaurant))
+//     }
+//   }
+// }
 
-const mapStateToProps = (state) => {
-  return state
-}
+// const mapStateToProps = (state) => {
+//   return state
+// }
 
 //connect this component by wrapping RestaurantInput below
-export default connect(mapStateToProps, mapDispatchToProps)(RestaurantInput)
+// export default connect(mapStateToProps, mapDispatchToProps)(RestaurantInput)
+
+// Alternative code
+// export default connect(null, mapDispatchToProps)(RestaurantInput);
+export default connect(null, { addRestaurant })(RestaurantInput);
